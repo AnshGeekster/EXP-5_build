@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the main idea behind a greedy algorithm?",
+      "answers": {
+        "a": "It explores all possible solutions",
+        "b": "It makes a locally optimal choice at each step",
+        "c": "It always produces the optimal solution",
+        "d": "It uses recursion and backtracking"
+      },
+      "explanations": {
+        "a": "This describes brute-force or exhaustive search, not a greedy approach.",
+        "b": "Correct. A greedy algorithm chooses the best option available at the current step without considering future consequences.",
+        "c": "Greedy algorithms do not always guarantee an optimal solution for all problems.",
+        "d": "Recursion and backtracking are techniques used in other paradigms, not greedy algorithms."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the coin change problem, what is the objective?",
+      "answers": {
+        "a": "To maximize the number of coins used",
+        "b": "To minimize the value of coins",
+        "c": "To make the amount using the fewest number of coins",
+        "d": "To use all available denominations"
+      },
+      "explanations": {
+        "a": "The goal is to minimize, not maximize, the number of coins.",
+        "b": "Coin values are fixed; minimizing value is not the objective.",
+        "c": "Correct. The aim is to represent the amount using the minimum number of coins.",
+        "d": "Using all denominations is not required to solve the problem."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a valid coin denomination set for the classic coin change problem?",
+      "answers": {
+        "a": "{3, 7, 11}",
+        "b": "{1, 2, 5, 10}",
+        "c": "{4, 6, 8}",
+        "d": "{9, 13}"
+      },
+      "explanations": {
+        "a": "This set does not include 1, so some amounts cannot be formed.",
+        "b": "Correct. This is a standard denomination set that allows forming any amount.",
+        "c": "This set cannot form all values and is not commonly used.",
+        "d": "This set lacks smaller denominations needed for flexibility."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is meant by a 'locally optimal' choice?",
+      "answers": {
+        "a": "Best solution for the entire problem",
+        "b": "Best choice among all algorithms",
+        "c": "Best choice at the current step",
+        "d": "Random selection of a choice"
+      },
+      "explanations": {
+        "a": "This describes a globally optimal solution, not a local one.",
+        "b": "Algorithms are not compared during execution.",
+        "c": "Correct. A locally optimal choice is the best option available at the current step.",
+        "d": "Greedy algorithms are deterministic, not random."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which approach is generally used to guarantee an optimal solution for the coin change problem?",
+      "answers": {
+        "a": "Greedy algorithm",
+        "b": "Divide and conquer",
+        "c": "Dynamic programming",
+        "d": "Brute force only"
+      },
+      "explanations": {
+        "a": "Greedy does not always guarantee optimal solutions.",
+        "b": "Divide and conquer alone is not sufficient for this problem.",
+        "c": "Correct. Dynamic programming considers all subproblems and guarantees optimality.",
+        "d": "Brute force is inefficient and not preferred."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}

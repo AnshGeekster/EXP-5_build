@@ -2,86 +2,171 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Why does the greedy approach sometimes fail in the coin change problem?",
+      "question": "For which type of coin systems does the greedy coin change algorithm always produce an optimal solution?",
       "answers": {
-        "a": "Because it does not consider future consequences of current choices",
-        "b": "Because it always selects the smallest coin first",
-        "c": "Because it explores all possible combinations",
-        "d": "Because it uses too much memory"
+        "a": "Any arbitrary coin system",
+        "b": "Canonical coin systems",
+        "c": "Coin systems with prime denominations",
+        "d": "Coin systems with equal gaps"
       },
       "explanations": {
-        "a": "Correct. Greedy algorithms make decisions based only on the current step, which may lead to suboptimal global solutions.",
-        "b": "Greedy usually selects the largest coin, not the smallest.",
-        "c": "Exploring all combinations is characteristic of brute-force or dynamic programming, not greedy.",
-        "d": "Greedy algorithms are memory efficient compared to dynamic programming."
+        "a": "Greedy does not always work for arbitrary coin systems.",
+        "b": "Correct. Canonical coin systems are designed so greedy choices always lead to an optimal solution.",
+        "c": "Prime denominations alone do not guarantee greedy optimality.",
+        "d": "Equal gaps between coins do not ensure correctness of greedy."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Which coin denomination set is a known example where the greedy approach fails?",
+      "question": "Why does the greedy algorithm sort coin denominations in descending order for the coin change problem?",
       "answers": {
-        "a": "{1, 5, 10, 25}",
-        "b": "{1, 2, 5, 10}",
-        "c": "{1, 3, 4}",
-        "d": "{1, 2, 5, 20}"
+        "a": "To reduce time complexity",
+        "b": "To ensure larger coins are chosen first",
+        "c": "To remove duplicate denominations",
+        "d": "To simplify implementation"
       },
       "explanations": {
-        "a": "Greedy works correctly for standard US coin denominations.",
-        "b": "This denomination set does not produce a greedy failure case.",
-        "c": "Correct. For amount 6, greedy gives 4+1+1, while optimal is 3+3.",
-        "d": "Greedy works optimally for this set in most cases."
+        "a": "Sorting alone does not reduce the algorithm’s time complexity significantly.",
+        "b": "Correct. Greedy works by selecting the largest possible coin at each step.",
+        "c": "Duplicate removal is not the purpose of sorting.",
+        "d": "Simplification is secondary; the main reason is greedy selection."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Given denominations {1, 7, 10} and amount 14, what result will the greedy algorithm produce?",
+      "answers": {
+        "a": "7 + 7",
+        "b": "10 + 1 + 1 + 1 + 1",
+        "c": "1 + 1 + 1 + 1 + 10",
+        "d": "No solution"
+      },
+      "explanations": {
+        "a": "This is the optimal solution but not the greedy result.",
+        "b": "Correct. Greedy picks 10 first, then fills the remaining amount with 1s.",
+        "c": "Order does not change the greedy logic, but greedy still starts with 10.",
+        "d": "A solution exists for this coin system."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is the greedy solution for denominations {1, 3, 4} and amount 6 considered suboptimal?",
+      "answers": {
+        "a": "It uses repeated coins",
+        "b": "It ignores smaller denominations",
+        "c": "It minimizes value instead of coin count",
+        "d": "It makes a locally optimal choice that blocks a global optimum"
+      },
+      "explanations": {
+        "a": "Using repeated coins is allowed in coin change problems.",
+        "b": "Greedy does consider smaller coins when needed.",
+        "c": "Greedy minimizes remaining value, not coin count.",
+        "d": "Correct. Choosing 4 first prevents reaching the optimal solution 3 + 3."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which property is required for a greedy algorithm to guarantee optimality in the coin change problem?",
+      "answers": {
+        "a": "Overlapping subproblems",
+        "b": "Greedy choice property",
+        "c": "Recursive structure",
+        "d": "Backtracking capability"
+      },
+      "explanations": {
+        "a": "Overlapping subproblems are related to dynamic programming.",
+        "b": "Correct. The greedy choice property ensures local choices lead to a global optimum.",
+        "c": "Recursion is not mandatory for greedy algorithms.",
+        "d": "Greedy algorithms do not rely on backtracking."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In greedy coin change, what happens if a denomination exactly equals the remaining amount?",
+      "answers": {
+        "a": "The algorithm terminates immediately",
+        "b": "The coin is selected and the process ends",
+        "c": "The coin is skipped",
+        "d": "The algorithm restarts"
+      },
+      "explanations": {
+        "a": "Termination happens after selection, not before it.",
+        "b": "Correct. The exact coin is chosen and no amount remains.",
+        "c": "Exact matches are always selected in greedy.",
+        "d": "Greedy algorithms never restart."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why are greedy algorithms generally faster than dynamic programming for the coin change problem?",
+      "answers": {
+        "a": "Greedy explores all combinations",
+        "b": "Greedy avoids recursion",
+        "c": "Greedy makes one decision per step without revisiting subproblems",
+        "d": "Greedy stores intermediate results"
+      },
+      "explanations": {
+        "a": "Exploring all combinations is characteristic of DP, not greedy.",
+        "b": "Greedy can use recursion but does not rely on it.",
+        "c": "Correct. Greedy makes direct decisions without re-computation.",
+        "d": "Storing results is a feature of dynamic programming."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "How does dynamic programming ensure an optimal solution for the coin change problem?",
+      "question": "For denominations {1, 5, 6, 9} and amount 11, which solution will the greedy algorithm produce?",
       "answers": {
-        "a": "By selecting the largest denomination first",
-        "b": "By storing and reusing solutions to subproblems",
-        "c": "By making random choices",
-        "d": "By reducing the number of denominations"
+        "a": "6 + 5",
+        "b": "9 + 1 + 1",
+        "c": "5 + 5 + 1",
+        "d": "6 + 1 + 1 + 1 + 1 + 1"
       },
       "explanations": {
-        "a": "Selecting the largest denomination is a greedy strategy.",
-        "b": "Correct. Dynamic programming builds solutions from smaller subproblems and guarantees optimality.",
-        "c": "Random choices do not ensure correctness.",
-        "d": "Reducing denominations does not solve the optimization problem."
+        "a": "This is the optimal solution, not the greedy one.",
+        "b": "Correct. Greedy picks 9 first, then uses two 1s.",
+        "c": "Greedy does not pick 5 before 9.",
+        "d": "Greedy would not skip the larger coin 9."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What key difference between greedy and dynamic programming is demonstrated through the simulation?",
+      "question": "Why does dynamic programming always find the optimal coin change solution?",
       "answers": {
-        "a": "Greedy always uses recursion, while DP does not",
-        "b": "Greedy focuses on local optimization, while DP focuses on global optimization",
-        "c": "DP is faster in all cases",
-        "d": "Greedy uses more memory than DP"
+        "a": "It uses sorting",
+        "b": "It tries only the largest coins",
+        "c": "It evaluates all subproblem combinations",
+        "d": "It avoids recursion"
       },
       "explanations": {
-        "a": "Neither greedy nor DP necessarily requires recursion.",
-        "b": "Correct. Greedy optimizes locally, while dynamic programming ensures a globally optimal solution.",
-        "c": "DP is not always faster due to higher time complexity.",
-        "d": "Dynamic programming generally uses more memory than greedy."
+        "a": "Sorting alone does not guarantee optimality.",
+        "b": "Trying only large coins is a greedy approach.",
+        "c": "Correct. DP considers all subproblems to ensure the best solution.",
+        "d": "DP may or may not use recursion."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "Based on the simulation results, when should dynamic programming be preferred over the greedy approach?",
+      "question": "Which statement correctly compares greedy and dynamic programming approaches for coin change?",
       "answers": {
-        "a": "When the coin denominations are canonical",
-        "b": "When speed is the only requirement",
-        "c": "When correctness and optimality are critical",
-        "d": "When memory usage must be minimal"
+        "a": "Greedy is always optimal and faster",
+        "b": "Dynamic programming is faster but less accurate",
+        "c": "Greedy is faster but may be suboptimal, while DP guarantees optimality",
+        "d": "Both always produce the same result"
       },
       "explanations": {
-        "a": "Canonical coin systems often work well with greedy algorithms.",
-        "b": "Greedy is generally faster than DP.",
-        "c": "Correct. Dynamic programming guarantees optimal results even when greedy fails.",
-        "d": "DP uses more memory, so it is not ideal when memory is limited."
+        "a": "Greedy is not always optimal.",
+        "b": "DP is accurate but usually slower.",
+        "c": "Correct. This captures the key trade-off between greedy and DP.",
+        "d": "They can produce different results for non-canonical systems."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"

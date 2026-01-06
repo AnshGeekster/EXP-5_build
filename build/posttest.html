@@ -356,14 +356,14 @@
                 
                 
                   <div class="question beginner">
-                    Why does the greedy approach sometimes fail in the coin change problem?
+                    For which type of coin systems does the greedy coin change algorithm always produce an optimal solution?
                   </div>
                   
                   <div class="answers">
                     <div id="answer0a">
                       <label>
                         <input type="radio" name="question0" value="a">
-                        a: Because it does not consider future consequences of current choices
+                        a: Any arbitrary coin system
                       </label>
                       <a href="#" id="explanation0a" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -371,7 +371,7 @@
                     <div id="answer0b">
                       <label>
                         <input type="radio" name="question0" value="b">
-                        b: Because it always selects the smallest coin first
+                        b: Canonical coin systems
                       </label>
                       <a href="#" id="explanation0b" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -379,7 +379,7 @@
                     <div id="answer0c">
                       <label>
                         <input type="radio" name="question0" value="c">
-                        c: Because it explores all possible combinations
+                        c: Coin systems with prime denominations
                       </label>
                       <a href="#" id="explanation0c" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -387,7 +387,7 @@
                     <div id="answer0d">
                       <label>
                         <input type="radio" name="question0" value="d">
-                        d: Because it uses too much memory
+                        d: Coin systems with equal gaps
                       </label>
                       <a href="#" id="explanation0d" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -395,14 +395,14 @@
                 </div>
                 
                   <div class="question beginner">
-                    Which coin denomination set is a known example where the greedy approach fails?
+                    Why does the greedy algorithm sort coin denominations in descending order for the coin change problem?
                   </div>
                   
                   <div class="answers">
                     <div id="answer1a">
                       <label>
                         <input type="radio" name="question1" value="a">
-                        a: {1, 5, 10, 25}
+                        a: To reduce time complexity
                       </label>
                       <a href="#" id="explanation1a" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -410,7 +410,7 @@
                     <div id="answer1b">
                       <label>
                         <input type="radio" name="question1" value="b">
-                        b: {1, 2, 5, 10}
+                        b: To ensure larger coins are chosen first
                       </label>
                       <a href="#" id="explanation1b" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -418,7 +418,7 @@
                     <div id="answer1c">
                       <label>
                         <input type="radio" name="question1" value="c">
-                        c: {1, 3, 4}
+                        c: To remove duplicate denominations
                       </label>
                       <a href="#" id="explanation1c" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -426,7 +426,7 @@
                     <div id="answer1d">
                       <label>
                         <input type="radio" name="question1" value="d">
-                        d: {1, 2, 5, 20}
+                        d: To simplify implementation
                       </label>
                       <a href="#" id="explanation1d" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -434,14 +434,14 @@
                 </div>
                 
                   <div class="question beginner">
-                    How does dynamic programming ensure an optimal solution for the coin change problem?
+                    Given denominations {1, 7, 10} and amount 14, what result will the greedy algorithm produce?
                   </div>
                   
                   <div class="answers">
                     <div id="answer2a">
                       <label>
                         <input type="radio" name="question2" value="a">
-                        a: By selecting the largest denomination first
+                        a: 7 + 7
                       </label>
                       <a href="#" id="explanation2a" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -449,7 +449,7 @@
                     <div id="answer2b">
                       <label>
                         <input type="radio" name="question2" value="b">
-                        b: By storing and reusing solutions to subproblems
+                        b: 10 + 1 + 1 + 1 + 1
                       </label>
                       <a href="#" id="explanation2b" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -457,7 +457,7 @@
                     <div id="answer2c">
                       <label>
                         <input type="radio" name="question2" value="c">
-                        c: By making random choices
+                        c: 1 + 1 + 1 + 1 + 10
                       </label>
                       <a href="#" id="explanation2c" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -465,7 +465,7 @@
                     <div id="answer2d">
                       <label>
                         <input type="radio" name="question2" value="d">
-                        d: By reducing the number of denominations
+                        d: No solution
                       </label>
                       <a href="#" id="explanation2d" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -473,14 +473,14 @@
                 </div>
                 
                   <div class="question beginner">
-                    What key difference between greedy and dynamic programming is demonstrated through the simulation?
+                    Why is the greedy solution for denominations {1, 3, 4} and amount 6 considered suboptimal?
                   </div>
                   
                   <div class="answers">
                     <div id="answer3a">
                       <label>
                         <input type="radio" name="question3" value="a">
-                        a: Greedy always uses recursion, while DP does not
+                        a: It uses repeated coins
                       </label>
                       <a href="#" id="explanation3a" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -488,7 +488,7 @@
                     <div id="answer3b">
                       <label>
                         <input type="radio" name="question3" value="b">
-                        b: Greedy focuses on local optimization, while DP focuses on global optimization
+                        b: It ignores smaller denominations
                       </label>
                       <a href="#" id="explanation3b" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -496,7 +496,7 @@
                     <div id="answer3c">
                       <label>
                         <input type="radio" name="question3" value="c">
-                        c: DP is faster in all cases
+                        c: It minimizes value instead of coin count
                       </label>
                       <a href="#" id="explanation3c" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -504,7 +504,7 @@
                     <div id="answer3d">
                       <label>
                         <input type="radio" name="question3" value="d">
-                        d: Greedy uses more memory than DP
+                        d: It makes a locally optimal choice that blocks a global optimum
                       </label>
                       <a href="#" id="explanation3d" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -512,14 +512,14 @@
                 </div>
                 
                   <div class="question beginner">
-                    Based on the simulation results, when should dynamic programming be preferred over the greedy approach?
+                    Which property is required for a greedy algorithm to guarantee optimality in the coin change problem?
                   </div>
                   
                   <div class="answers">
                     <div id="answer4a">
                       <label>
                         <input type="radio" name="question4" value="a">
-                        a: When the coin denominations are canonical
+                        a: Overlapping subproblems
                       </label>
                       <a href="#" id="explanation4a" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -527,7 +527,7 @@
                     <div id="answer4b">
                       <label>
                         <input type="radio" name="question4" value="b">
-                        b: When speed is the only requirement
+                        b: Greedy choice property
                       </label>
                       <a href="#" id="explanation4b" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -535,7 +535,7 @@
                     <div id="answer4c">
                       <label>
                         <input type="radio" name="question4" value="c">
-                        c: When correctness and optimality are critical
+                        c: Recursive structure
                       </label>
                       <a href="#" id="explanation4c" class="accordion" onclick="return false;">Explanation</a>
                     </div>
@@ -543,9 +543,204 @@
                     <div id="answer4d">
                       <label>
                         <input type="radio" name="question4" value="d">
-                        d: When memory usage must be minimal
+                        d: Backtracking capability
                       </label>
                       <a href="#" id="explanation4d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    In greedy coin change, what happens if a denomination exactly equals the remaining amount?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer5a">
+                      <label>
+                        <input type="radio" name="question5" value="a">
+                        a: The algorithm terminates immediately
+                      </label>
+                      <a href="#" id="explanation5a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5b">
+                      <label>
+                        <input type="radio" name="question5" value="b">
+                        b: The coin is selected and the process ends
+                      </label>
+                      <a href="#" id="explanation5b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5c">
+                      <label>
+                        <input type="radio" name="question5" value="c">
+                        c: The coin is skipped
+                      </label>
+                      <a href="#" id="explanation5c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5d">
+                      <label>
+                        <input type="radio" name="question5" value="d">
+                        d: The algorithm restarts
+                      </label>
+                      <a href="#" id="explanation5d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    Why are greedy algorithms generally faster than dynamic programming for the coin change problem?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer6a">
+                      <label>
+                        <input type="radio" name="question6" value="a">
+                        a: Greedy explores all combinations
+                      </label>
+                      <a href="#" id="explanation6a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6b">
+                      <label>
+                        <input type="radio" name="question6" value="b">
+                        b: Greedy avoids recursion
+                      </label>
+                      <a href="#" id="explanation6b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6c">
+                      <label>
+                        <input type="radio" name="question6" value="c">
+                        c: Greedy makes one decision per step without revisiting subproblems
+                      </label>
+                      <a href="#" id="explanation6c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6d">
+                      <label>
+                        <input type="radio" name="question6" value="d">
+                        d: Greedy stores intermediate results
+                      </label>
+                      <a href="#" id="explanation6d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    For denominations {1, 5, 6, 9} and amount 11, which solution will the greedy algorithm produce?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer7a">
+                      <label>
+                        <input type="radio" name="question7" value="a">
+                        a: 6 + 5
+                      </label>
+                      <a href="#" id="explanation7a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7b">
+                      <label>
+                        <input type="radio" name="question7" value="b">
+                        b: 9 + 1 + 1
+                      </label>
+                      <a href="#" id="explanation7b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7c">
+                      <label>
+                        <input type="radio" name="question7" value="c">
+                        c: 5 + 5 + 1
+                      </label>
+                      <a href="#" id="explanation7c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7d">
+                      <label>
+                        <input type="radio" name="question7" value="d">
+                        d: 6 + 1 + 1 + 1 + 1 + 1
+                      </label>
+                      <a href="#" id="explanation7d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    Why does dynamic programming always find the optimal coin change solution?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer8a">
+                      <label>
+                        <input type="radio" name="question8" value="a">
+                        a: It uses sorting
+                      </label>
+                      <a href="#" id="explanation8a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8b">
+                      <label>
+                        <input type="radio" name="question8" value="b">
+                        b: It tries only the largest coins
+                      </label>
+                      <a href="#" id="explanation8b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8c">
+                      <label>
+                        <input type="radio" name="question8" value="c">
+                        c: It evaluates all subproblem combinations
+                      </label>
+                      <a href="#" id="explanation8c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8d">
+                      <label>
+                        <input type="radio" name="question8" value="d">
+                        d: It avoids recursion
+                      </label>
+                      <a href="#" id="explanation8d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    Which statement correctly compares greedy and dynamic programming approaches for coin change?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer9a">
+                      <label>
+                        <input type="radio" name="question9" value="a">
+                        a: Greedy is always optimal and faster
+                      </label>
+                      <a href="#" id="explanation9a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9b">
+                      <label>
+                        <input type="radio" name="question9" value="b">
+                        b: Dynamic programming is faster but less accurate
+                      </label>
+                      <a href="#" id="explanation9b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9c">
+                      <label>
+                        <input type="radio" name="question9" value="c">
+                        c: Greedy is faster but may be suboptimal, while DP guarantees optimality
+                      </label>
+                      <a href="#" id="explanation9c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9d">
+                      <label>
+                        <input type="radio" name="question9" value="d">
+                        d: Both always produce the same result
+                      </label>
+                      <a href="#" id="explanation9d" class="accordion" onclick="return false;">Explanation</a>
                     </div>
                     <p class="panel">Explanation</p>
                 </div>
@@ -555,7 +750,7 @@
           </div>
             
             <script>
-              const myQuestions = [{"question":"Why does the greedy approach sometimes fail in the coin change problem?","answers":{"a":"Because it does not consider future consequences of current choices","b":"Because it always selects the smallest coin first","c":"Because it explores all possible combinations","d":"Because it uses too much memory"},"explanations":{"a":"Correct. Greedy algorithms make decisions based only on the current step, which may lead to suboptimal global solutions.","b":"Greedy usually selects the largest coin, not the smallest.","c":"Exploring all combinations is characteristic of brute-force or dynamic programming, not greedy.","d":"Greedy algorithms are memory efficient compared to dynamic programming."},"correctAnswer":"a","difficulty":"beginner"},{"question":"Which coin denomination set is a known example where the greedy approach fails?","answers":{"a":"{1, 5, 10, 25}","b":"{1, 2, 5, 10}","c":"{1, 3, 4}","d":"{1, 2, 5, 20}"},"explanations":{"a":"Greedy works correctly for standard US coin denominations.","b":"This denomination set does not produce a greedy failure case.","c":"Correct. For amount 6, greedy gives 4+1+1, while optimal is 3+3.","d":"Greedy works optimally for this set in most cases."},"correctAnswer":"c","difficulty":"beginner"},{"question":"How does dynamic programming ensure an optimal solution for the coin change problem?","answers":{"a":"By selecting the largest denomination first","b":"By storing and reusing solutions to subproblems","c":"By making random choices","d":"By reducing the number of denominations"},"explanations":{"a":"Selecting the largest denomination is a greedy strategy.","b":"Correct. Dynamic programming builds solutions from smaller subproblems and guarantees optimality.","c":"Random choices do not ensure correctness.","d":"Reducing denominations does not solve the optimization problem."},"correctAnswer":"b","difficulty":"beginner"},{"question":"What key difference between greedy and dynamic programming is demonstrated through the simulation?","answers":{"a":"Greedy always uses recursion, while DP does not","b":"Greedy focuses on local optimization, while DP focuses on global optimization","c":"DP is faster in all cases","d":"Greedy uses more memory than DP"},"explanations":{"a":"Neither greedy nor DP necessarily requires recursion.","b":"Correct. Greedy optimizes locally, while dynamic programming ensures a globally optimal solution.","c":"DP is not always faster due to higher time complexity.","d":"Dynamic programming generally uses more memory than greedy."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Based on the simulation results, when should dynamic programming be preferred over the greedy approach?","answers":{"a":"When the coin denominations are canonical","b":"When speed is the only requirement","c":"When correctness and optimality are critical","d":"When memory usage must be minimal"},"explanations":{"a":"Canonical coin systems often work well with greedy algorithms.","b":"Greedy is generally faster than DP.","c":"Correct. Dynamic programming guarantees optimal results even when greedy fails.","d":"DP uses more memory, so it is not ideal when memory is limited."},"correctAnswer":"c","difficulty":"beginner"}];
+              const myQuestions = [{"question":"For which type of coin systems does the greedy coin change algorithm always produce an optimal solution?","answers":{"a":"Any arbitrary coin system","b":"Canonical coin systems","c":"Coin systems with prime denominations","d":"Coin systems with equal gaps"},"explanations":{"a":"Greedy does not always work for arbitrary coin systems.","b":"Correct. Canonical coin systems are designed so greedy choices always lead to an optimal solution.","c":"Prime denominations alone do not guarantee greedy optimality.","d":"Equal gaps between coins do not ensure correctness of greedy."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Why does the greedy algorithm sort coin denominations in descending order for the coin change problem?","answers":{"a":"To reduce time complexity","b":"To ensure larger coins are chosen first","c":"To remove duplicate denominations","d":"To simplify implementation"},"explanations":{"a":"Sorting alone does not reduce the algorithm’s time complexity significantly.","b":"Correct. Greedy works by selecting the largest possible coin at each step.","c":"Duplicate removal is not the purpose of sorting.","d":"Simplification is secondary; the main reason is greedy selection."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Given denominations {1, 7, 10} and amount 14, what result will the greedy algorithm produce?","answers":{"a":"7 + 7","b":"10 + 1 + 1 + 1 + 1","c":"1 + 1 + 1 + 1 + 10","d":"No solution"},"explanations":{"a":"This is the optimal solution but not the greedy result.","b":"Correct. Greedy picks 10 first, then fills the remaining amount with 1s.","c":"Order does not change the greedy logic, but greedy still starts with 10.","d":"A solution exists for this coin system."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Why is the greedy solution for denominations {1, 3, 4} and amount 6 considered suboptimal?","answers":{"a":"It uses repeated coins","b":"It ignores smaller denominations","c":"It minimizes value instead of coin count","d":"It makes a locally optimal choice that blocks a global optimum"},"explanations":{"a":"Using repeated coins is allowed in coin change problems.","b":"Greedy does consider smaller coins when needed.","c":"Greedy minimizes remaining value, not coin count.","d":"Correct. Choosing 4 first prevents reaching the optimal solution 3 + 3."},"correctAnswer":"d","difficulty":"beginner"},{"question":"Which property is required for a greedy algorithm to guarantee optimality in the coin change problem?","answers":{"a":"Overlapping subproblems","b":"Greedy choice property","c":"Recursive structure","d":"Backtracking capability"},"explanations":{"a":"Overlapping subproblems are related to dynamic programming.","b":"Correct. The greedy choice property ensures local choices lead to a global optimum.","c":"Recursion is not mandatory for greedy algorithms.","d":"Greedy algorithms do not rely on backtracking."},"correctAnswer":"b","difficulty":"beginner"},{"question":"In greedy coin change, what happens if a denomination exactly equals the remaining amount?","answers":{"a":"The algorithm terminates immediately","b":"The coin is selected and the process ends","c":"The coin is skipped","d":"The algorithm restarts"},"explanations":{"a":"Termination happens after selection, not before it.","b":"Correct. The exact coin is chosen and no amount remains.","c":"Exact matches are always selected in greedy.","d":"Greedy algorithms never restart."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Why are greedy algorithms generally faster than dynamic programming for the coin change problem?","answers":{"a":"Greedy explores all combinations","b":"Greedy avoids recursion","c":"Greedy makes one decision per step without revisiting subproblems","d":"Greedy stores intermediate results"},"explanations":{"a":"Exploring all combinations is characteristic of DP, not greedy.","b":"Greedy can use recursion but does not rely on it.","c":"Correct. Greedy makes direct decisions without re-computation.","d":"Storing results is a feature of dynamic programming."},"correctAnswer":"c","difficulty":"beginner"},{"question":"For denominations {1, 5, 6, 9} and amount 11, which solution will the greedy algorithm produce?","answers":{"a":"6 + 5","b":"9 + 1 + 1","c":"5 + 5 + 1","d":"6 + 1 + 1 + 1 + 1 + 1"},"explanations":{"a":"This is the optimal solution, not the greedy one.","b":"Correct. Greedy picks 9 first, then uses two 1s.","c":"Greedy does not pick 5 before 9.","d":"Greedy would not skip the larger coin 9."},"correctAnswer":"b","difficulty":"beginner"},{"question":"Why does dynamic programming always find the optimal coin change solution?","answers":{"a":"It uses sorting","b":"It tries only the largest coins","c":"It evaluates all subproblem combinations","d":"It avoids recursion"},"explanations":{"a":"Sorting alone does not guarantee optimality.","b":"Trying only large coins is a greedy approach.","c":"Correct. DP considers all subproblems to ensure the best solution.","d":"DP may or may not use recursion."},"correctAnswer":"c","difficulty":"beginner"},{"question":"Which statement correctly compares greedy and dynamic programming approaches for coin change?","answers":{"a":"Greedy is always optimal and faster","b":"Dynamic programming is faster but less accurate","c":"Greedy is faster but may be suboptimal, while DP guarantees optimality","d":"Both always produce the same result"},"explanations":{"a":"Greedy is not always optimal.","b":"DP is accurate but usually slower.","c":"Correct. This captures the key trade-off between greedy and DP.","d":"They can produce different results for non-canonical systems."},"correctAnswer":"c","difficulty":"beginner"}];
             </script>
               <script src="./assets/js/assessment_v2.js"></script>  
           <div class="bug-report-mobile">

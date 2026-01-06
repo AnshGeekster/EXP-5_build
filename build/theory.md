@@ -1,23 +1,12 @@
-### 1. Introduction to Optimization Problems
-
-In computer science, many real-world problems require finding the best possible solution among several available options. Such problems are known as optimization problems. The goal may be to minimize cost, time, distance, or the number of resources used, or to maximize profit, efficiency, or accuracy.
-
-One common optimization problem is the Coin Change Problem, where the objective is to determine the minimum number of coins required to make a given amount using a set of available coin denominations. This problem appears in practical applications such as currency systems, vending machines, banking software, and digital payment systems.
-
-To solve optimization problems efficiently, different algorithmic techniques are used. Two important approaches are:
-
-* Greedy Algorithms
-* Dynamic Programming
-
-### 2. Greedy Algorithm
-#### 2.1 Definition
+### 1. Greedy Algorithm
+#### 1.1 Definition
 
 A Greedy Algorithm is an algorithmic technique that constructs a solution incrementally by making the best possible choice at each step, based only on the information available at that moment. The decision made at each step is final and is never reconsidered later.
 
 The core idea behind a greedy algorithm is:
 A globally optimal solution can be achieved by repeatedly making locally optimal decisions.
 
-#### 2.2 Characteristics of Greedy Algorithms
+#### 1.2 Characteristics of Greedy Algorithms
 
 Greedy algorithms follow a straightforward and intuitive strategy. At every stage, the algorithm selects the option that appears to be the most beneficial at that moment. Once a choice is made, it cannot be altered in later stages, which distinguishes greedy algorithms from other optimization techniques.
 The main characteristics of greedy algorithms are:
@@ -27,7 +16,7 @@ The main characteristics of greedy algorithms are:
 * **Incremental Construction**: The solution is built step by step.
 * **Low Computational Overhead**: Greedy algorithms usually require less time and memory compared to other approaches.
 
-#### 2.3 Conditions for Applicability of Greedy Algorithms
+#### 1.3 Conditions for Applicability of Greedy Algorithms
 
 A greedy algorithm produces an optimal solution only when the problem satisfies certain conditions. If these conditions are met, making locally optimal decisions at each step will lead to a globally optimal solution. In the context of the Coin Change Problem, the following two conditions are essential.
 
@@ -55,7 +44,7 @@ In the coin change problem, once a greedy choice is made (i.e., a coin is select
 
 This property ensures that solving the problem step by step using optimal solutions of smaller amounts will eventually result in the optimal solution for the full amount.
 
-#### 2.4 Time and Space Complexity
+#### 1.4 Time and Space Complexity
 
 Time Complexity: **O(n+k)**
 where, 
@@ -66,7 +55,7 @@ Space Complexity: **O(1)**,since no extra memory is required.
 
 This makes greedy algorithms fast and memory-efficient.
 
-#### 2.5 Advantages of Greedy Algorithms
+#### 1.5 Advantages of Greedy Algorithms
 
 Greedy algorithms offer several benefits:
 
@@ -76,7 +65,7 @@ Greedy algorithms offer several benefits:
 * Well-suited for real-time systems and large datasets.
 * Effective for problems with clear local choices, such as scheduling and coin change in standard currency systems.
 
-#### 2.6 Disadvantages of Greedy Algorithms
+#### 1.6 Disadvantages of Greedy Algorithms
 
 Despite their efficiency, greedy algorithms have limitations:
 
@@ -85,7 +74,7 @@ Despite their efficiency, greedy algorithms have limitations:
 * Not suitable for problems with complex dependencies.
 * Performance depends heavily on problem structure.
 
-#### 2.7 Applications of Greedy Algorithms
+#### 1.7 Applications of Greedy Algorithms
 
 Greedy algorithms are widely used in various computer science applications, including:
 
@@ -95,7 +84,7 @@ Greedy algorithms are widely used in various computer science applications, incl
 * Minimum Spanning Tree (Prim’s and Kruskal’s algorithms).
 * Job Scheduling Problems.
 
-### 3. Greedy Algorithm for the Coin Change Problem
+### 2. Greedy Algorithm for the Coin Change Problem
 
 The Coin Change Problem involves finding how a target amount can be formed using a given set of coin denominations, assuming an unlimited supply of each coin.
 
@@ -108,7 +97,7 @@ Greedy Strategy for Coin Change:
 
 This approach attempts to reduce the remaining amount as quickly as possible by selecting high-value coins.
 
-#### 3.1 Explanation of Coin Change Problem
+#### 2.1 Explanation of Coin Change Problem
 
 In the greedy approach to the Coin Change Problem, the algorithm always tries to minimize the number of coins by prioritizing coins with higher denominations. The intuition behind this strategy is that larger coins cover a greater portion of the target amount, thereby reducing the total number of selections required.
 
@@ -120,7 +109,7 @@ However, the greedy method does not evaluate all possible combinations of coins.
 
 Despite this limitation, the greedy coin change algorithm is preferred in many scenarios because of its simplicity, fast execution, and minimal memory usage. It provides a quick and efficient solution when optimality is guaranteed by the structure of the coin denominations.
 
-#### 3.2 Examples (Greedy Approach)
+#### 2.2 Examples (Greedy Approach)
 
 1. Let the coin denominations be {₹1, ₹2, ₹5, ₹10} and the target amount be ₹28.
 
@@ -153,7 +142,7 @@ This example demonstrates how the greedy algorithm repeatedly selects the highes
 
 **Explanation** - The greedy algorithm first selects ₹20, reducing the amount to ₹43. It again selects ₹20 twice, leaving ₹3. Since no higher denomination fits the remaining amount, the algorithm uses three ₹1 coins. The final solution is 20 + 20 + 20 + 1 + 1 + 1, using 6 coins. As this coin system is canonical, the greedy approach produces an optimal solution.
 
-#### 3.3 Limitation of Greedy Approach
+#### 2.3 Limitation of Greedy Approach
 
 The greedy approach does not always guarantee an optimal solution because it makes decisions based only on immediate benefit and ignores future consequences. It assumes that selecting the locally optimal choice at each step will always lead to a globally optimal solution, which is not true for all coin systems.
 
@@ -171,8 +160,8 @@ Consider the coin denominations {1, 3, 4} and a target amount of 6.
 
   In this case, the greedy algorithm fails because selecting the largest coin (4) first leads to a suboptimal solution. This example clearly demonstrates that greedy algorithms are not reliable for all coin change problems.
 
-### 4. Dynamic Programming Approach
-#### 4.1 Definition
+### 3. Dynamic Programming Approach
+#### 3.1 Definition
 
 Dynamic Programming (DP) is an algorithmic technique used to solve complex problems by breaking them down into smaller overlapping subproblems and storing their solutions to avoid repeated computation.
 
@@ -181,7 +170,7 @@ Dynamic programming guarantees an optimal solution when the problem exhibits:
 * Optimal Substructure – an optimal solution can be built from optimal solutions of subproblems.
 * Overlapping Subproblems – the same subproblems occur multiple times.
 
-#### 4.2 Dynamic Programming for Coin Change Problem
+#### 3.2 Dynamic Programming for Coin Change Problem
 
 In the coin change problem, DP computes the minimum number of coins required for every amount from 0 to the target value.
 
@@ -191,7 +180,7 @@ A table (or array) is created where:
 
 This systematic exploration ensures that all possible combinations are considered.
 
-#### 4.3 Example (Dynamic Programming)
+#### 3.3 Example (Dynamic Programming)
 
 Consider coin denominations {1, 3, 4} and target amount = 6.
 
@@ -200,7 +189,7 @@ Consider coin denominations {1, 3, 4} and target amount = 6.
 
 Dynamic programming evaluates all valid possibilities and selects the solution with the minimum number of coins.
 
-### 5. Comparison Between Greedy and Dynamic Programming
+### 4. Comparison Between Greedy and Dynamic Programming
 **Greedy Approach**
 
 * Makes locally optimal decisions.
@@ -215,7 +204,7 @@ Dynamic programming evaluates all valid possibilities and selects the solution w
 * Guarantees optimal solution.
 * Slightly higher time and space complexity.
 
-### 6. Why Greedy Fails and Dynamic Programming Works
+### 5. Why Greedy Fails and Dynamic Programming Works
 
 Greedy algorithms fail because:
 * They do not reconsider earlier decisions.
@@ -226,7 +215,7 @@ Dynamic programming succeeds because:
 * It reuses previously computed results.
 * It ensures global optimality.
 
-### 7.Difference Between Greedy Algorithm and Dynamic Programming
+### 6.Difference Between Greedy Algorithm and Dynamic Programming
 
 | Aspect | Greedy Algorithm | Dynamic Programming (Optimal) |
 |------|------------------|-------------------------------|

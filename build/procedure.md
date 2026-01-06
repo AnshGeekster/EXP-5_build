@@ -5,8 +5,9 @@
 1. Enter the required amount (M) in the input field provided.
 2. Select the desired currency system from the available options.
 3. Modify the coin denominations, if required, to create a custom currency system for experimentation.
+4. Adjust the Processing Speed as per your need using the speed slider.
 
-This step helps learners understand how different currency systems and denomination sets influence the behavior and outcome of the algorithm.
+These steps help learners understand how different currency systems and denomination sets influence the behavior and outcome of the algorithm.
 
 #### Step 2: Initialization of the Greedy Algorithm
 

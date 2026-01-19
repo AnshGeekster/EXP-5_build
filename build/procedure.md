@@ -2,7 +2,7 @@
 
 #### Step 1: User Input Configuration
 
-1. Enter the required amount (M) in the input field provided.
+1. Enter the required amount (M) in the input field provided, ensuring that the value lies within the recommended range of 0 < M ≤ 10⁷ for smooth and efficient execution of the simulation.
 2. Select the desired currency system from the available options.
 3. Modify the coin denominations, if required, to create a custom currency system for experimentation.
 4. Adjust the Processing Speed as per your need using the speed slider.

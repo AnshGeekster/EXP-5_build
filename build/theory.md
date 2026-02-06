@@ -215,28 +215,18 @@ Dynamic programming succeeds because:
 * It reuses previously computed results.
 * It ensures global optimality.
 
-### 6.Difference Between Greedy Algorithm and Dynamic Programming
+### 6. Difference Between Greedy Algorithm and Dynamic Programming (with Examples)
 
-| Aspect | Greedy Algorithm | Dynamic Programming (Optimal) |
-|------|------------------|-------------------------------|
-| Basic Idea | Chooses the best local option at each step | Evaluates all possible subproblems |
-| Decision Making | Local and immediate | Global and systematic |
-| Consideration of Future | Not considered | Fully considered |
-| Optimality Guarantee | Not guaranteed for all cases | Always guarantees optimal solution |
-| Backtracking | Not allowed | Implicitly allowed through DP table |
-| Reconsideration of Choices | Not possible | Possible via stored subproblem results |
-| Problem Requirements | Requires greedy choice property | Requires optimal substructure |
-| Handling Non-Canonical Coins | Often fails | Works correctly |
-| Solution Accuracy | May be suboptimal | Always optimal |
-| Time Complexity | O(n + k) | O(n × A) |
-| Space Complexity | O(1) | O(A) |
-| Memory Usage | Very low | Higher due to DP table |
-| Implementation Difficulty | Simple | Moderate |
-| Execution Speed | Very fast | Slower compared to greedy |
-| Use of Extra Storage | No | Yes |
-| Flexibility | Low | High |
-| Suitability for Large Inputs | Good when greedy works | Limited by memory constraints |
-| Real-World Usage | Currency systems, vending machines | Financial systems requiring accuracy |
-| Example Outcome (Coin Change) | May give non-optimal result | Always gives minimum coins |
-| Overall Reliability | Problem-dependent | Highly reliable |
-
+| Point of Comparison | Greedy Algorithm | Dynamic Programming (Optimal) |
+|--------------------|------------------|--------------------------------|
+| Decision Strategy | Chooses the best local option at each step | Considers all possible subproblems |
+| Nature of Solution | Fast but may be locally optimal only | Guarantees globally optimal solution |
+| Reconsideration of Choices | Decisions are final once made | Previous decisions are reused and optimized |
+| Future Impact | Does not consider future consequences | Fully considers future outcomes |
+| Memory Usage | Uses constant memory | Uses extra memory for DP table |
+| Implementation Complexity | Simple and easy to implement | More complex due to table construction |
+| Performance | Very fast execution | Slower compared to greedy |
+| Reliability | Works only for specific problems | Works for all valid cases |
+| Example (Coin Change) | Coins {1,3,4}, Amount = 6 → 4 + 1 + 1 (3 coins) | Coins {1,3,4}, Amount = 6 → 3 + 3 (2 coins – optimal) |
+| Result Accuracy | May produce non-optimal result | Always produces minimum coins |
+| Practical Use Case | Vending machines, standard currency systems | Financial systems, optimization problems |

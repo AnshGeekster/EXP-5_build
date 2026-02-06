@@ -508,114 +508,69 @@
           <li>It reuses previously computed results.</li>
           <li>It ensures global optimality.</li>
           </ul>
-          <h3 id="6difference-between-greedy-algorithm-and-dynamic-programming">6.Difference Between Greedy Algorithm and Dynamic Programming</h3>
+          <h3 id="6-difference-between-greedy-algorithm-and-dynamic-programming-with-examples">6. Difference Between Greedy Algorithm and Dynamic Programming (with Examples)</h3>
           <table>
           <thead>
           <tr>
-          <th>Aspect</th>
+          <th>Point of Comparison</th>
           <th>Greedy Algorithm</th>
           <th>Dynamic Programming (Optimal)</th>
           </tr>
           </thead>
           <tbody><tr>
-          <td>Basic Idea</td>
+          <td>Decision Strategy</td>
           <td>Chooses the best local option at each step</td>
-          <td>Evaluates all possible subproblems</td>
+          <td>Considers all possible subproblems</td>
           </tr>
           <tr>
-          <td>Decision Making</td>
-          <td>Local and immediate</td>
-          <td>Global and systematic</td>
-          </tr>
-          <tr>
-          <td>Consideration of Future</td>
-          <td>Not considered</td>
-          <td>Fully considered</td>
-          </tr>
-          <tr>
-          <td>Optimality Guarantee</td>
-          <td>Not guaranteed for all cases</td>
-          <td>Always guarantees optimal solution</td>
-          </tr>
-          <tr>
-          <td>Backtracking</td>
-          <td>Not allowed</td>
-          <td>Implicitly allowed through DP table</td>
+          <td>Nature of Solution</td>
+          <td>Fast but may be locally optimal only</td>
+          <td>Guarantees globally optimal solution</td>
           </tr>
           <tr>
           <td>Reconsideration of Choices</td>
-          <td>Not possible</td>
-          <td>Possible via stored subproblem results</td>
+          <td>Decisions are final once made</td>
+          <td>Previous decisions are reused and optimized</td>
           </tr>
           <tr>
-          <td>Problem Requirements</td>
-          <td>Requires greedy choice property</td>
-          <td>Requires optimal substructure</td>
-          </tr>
-          <tr>
-          <td>Handling Non-Canonical Coins</td>
-          <td>Often fails</td>
-          <td>Works correctly</td>
-          </tr>
-          <tr>
-          <td>Solution Accuracy</td>
-          <td>May be suboptimal</td>
-          <td>Always optimal</td>
-          </tr>
-          <tr>
-          <td>Time Complexity</td>
-          <td>O(n + k)</td>
-          <td>O(n × A)</td>
-          </tr>
-          <tr>
-          <td>Space Complexity</td>
-          <td>O(1)</td>
-          <td>O(A)</td>
+          <td>Future Impact</td>
+          <td>Does not consider future consequences</td>
+          <td>Fully considers future outcomes</td>
           </tr>
           <tr>
           <td>Memory Usage</td>
-          <td>Very low</td>
-          <td>Higher due to DP table</td>
+          <td>Uses constant memory</td>
+          <td>Uses extra memory for DP table</td>
           </tr>
           <tr>
-          <td>Implementation Difficulty</td>
-          <td>Simple</td>
-          <td>Moderate</td>
+          <td>Implementation Complexity</td>
+          <td>Simple and easy to implement</td>
+          <td>More complex due to table construction</td>
           </tr>
           <tr>
-          <td>Execution Speed</td>
-          <td>Very fast</td>
+          <td>Performance</td>
+          <td>Very fast execution</td>
           <td>Slower compared to greedy</td>
           </tr>
           <tr>
-          <td>Use of Extra Storage</td>
-          <td>No</td>
-          <td>Yes</td>
+          <td>Reliability</td>
+          <td>Works only for specific problems</td>
+          <td>Works for all valid cases</td>
           </tr>
           <tr>
-          <td>Flexibility</td>
-          <td>Low</td>
-          <td>High</td>
+          <td>Example (Coin Change)</td>
+          <td>Coins {1,3,4}, Amount = 6 → 4 + 1 + 1 (3 coins)</td>
+          <td>Coins {1,3,4}, Amount = 6 → 3 + 3 (2 coins – optimal)</td>
           </tr>
           <tr>
-          <td>Suitability for Large Inputs</td>
-          <td>Good when greedy works</td>
-          <td>Limited by memory constraints</td>
+          <td>Result Accuracy</td>
+          <td>May produce non-optimal result</td>
+          <td>Always produces minimum coins</td>
           </tr>
           <tr>
-          <td>Real-World Usage</td>
-          <td>Currency systems, vending machines</td>
-          <td>Financial systems requiring accuracy</td>
-          </tr>
-          <tr>
-          <td>Example Outcome (Coin Change)</td>
-          <td>May give non-optimal result</td>
-          <td>Always gives minimum coins</td>
-          </tr>
-          <tr>
-          <td>Overall Reliability</td>
-          <td>Problem-dependent</td>
-          <td>Highly reliable</td>
+          <td>Practical Use Case</td>
+          <td>Vending machines, standard currency systems</td>
+          <td>Financial systems, optimization problems</td>
           </tr>
           </tbody></table>
           

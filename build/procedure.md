@@ -73,7 +73,7 @@ Choose one of the following execution modes:
 * Internal algorithm state
 4. Analyze how locally optimal decisions are made at each step.
 
-After completion of the process, a summary table is displayed in the output panel showing:
+After completion of the process, a result summary is displayed in the output panel showing:
 * Total number of coins used
 * Execution time
 * Efficiency of the greedy algorithm

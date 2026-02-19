@@ -138,22 +138,22 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Why does dynamic programming always find the optimal coin change solution?",
-      "answers": {
-        "a": "It uses sorting",
-        "b": "It tries only the largest coins",
-        "c": "It evaluates all subproblem combinations",
-        "d": "It avoids recursion"
-      },
-      "explanations": {
-        "a": "Sorting alone does not guarantee optimality.",
-        "b": "Trying only large coins is a greedy approach.",
-        "c": "Correct. DP considers all subproblems to ensure the best solution.",
-        "d": "DP may or may not use recursion."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
+  "question": "What is the time complexity of the greedy coin change algorithm if there are n coin denominations and the amount is A?",
+  "answers": {
+    "a": "O(n × A)",
+    "b": "O(A)",
+    "c": "O(n log n)",
+    "d": "O(n + A)"
+  },
+  "explanations": {
+    "a": "This is typical for dynamic programming, not greedy.",
+    "b": "Greedy iterates over the amount but also checks denominations.",
+    "c": "Sorting may take O(n log n), but the full greedy process includes more steps.",
+    "d": "Correct. Greedy checks all denominations and reduces the amount step-by-step, leading to O(n + A) in simple implementations."
+  },
+  "correctAnswer": "d",
+  "difficulty": "intermediate"
+},
     {
       "question": "Which statement correctly compares greedy and dynamic programming approaches for coin change?",
       "answers": {

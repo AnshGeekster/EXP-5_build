@@ -364,27 +364,23 @@ table th {
 
 /* Permanent highlight for lines that run once (1-4) */
 .line-text.done {
-    color: #ff6a00; /* vivid orange for strong contrast on white */
+    color: #ff3300; /* bright red-orange for strong contrast */
     font-weight: 800;
-    text-shadow: 0 0 6px rgba(255,106,0,0.18);
 }
 
 /* Active loop-line highlight (toggles between lines 5-8) */
 .line-text.loop-active {
-    color: #ff6a00; /* vivid orange to catch attention */
+    color: #ff3300; /* bright red-orange to catch attention */
     font-weight: 800;
-    text-shadow: 0 0 6px rgba(255,106,0,0.18);
 }
 
 /* Dark mode: use violet highlight so it stands out on dark backgrounds */
 @media (prefers-color-scheme: dark) {
     .line-text.done {
-        color: #3d149c; /* violet */
-        text-shadow: 0 0 8px rgba(139,92,246,0.22);
+        color: #ff5533; /* bright orange-red for dark mode */
     }
     .line-text.loop-active {
-        color: #4615b8;
-        text-shadow: 0 0 8px rgba(139,92,246,0.22);
+        color: #ff5533; /* bright orange-red for dark mode */
     }
 }
 

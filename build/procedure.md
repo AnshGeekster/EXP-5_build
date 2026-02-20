@@ -7,7 +7,7 @@
 3. Modify the coin denominations, if required, to create a custom currency system for experimentation.
 4. Adjust the Processing Speed as per your need using the speed slider.
 
-<img src="images/image1.png" width="400">
+<img src="images/image11.png" width="700">
 
 *Figure 1: Input panel showing amount entry, currency selection, denominations, and processing speed control.*
 
@@ -25,7 +25,7 @@ These steps help learners understand how different currency systems and denomina
 2. This action initializes the Greedy Coin Change Algorithm and prepares the simulation environment for execution.
 3. The remaining amount, available coin denominations, and pseudocode display are reset and set to their initial states.
 
-<img src="images/image3.png" width="300">
+<img src="images/image13.png" width="700">
 
 *Figure 3: Processing Panel showing the remaining amount, available coin denominations, and pseudocode display.*
 
@@ -80,51 +80,6 @@ After completion of the process, a result summary is displayed in the output pan
 
 This step helps visualize and analyze the working of the greedy strategy in detail.
 
-<img src="images/image6.png" width="300">
+<img src="images/image12.png" width="700">
 
 *Figure 6: Output panel showing the Coins used, summary table, execution time and efficiency.*
-
-#### Step 5: Transition to Advanced Analysis
-
-1. After completing the greedy algorithm simulation, click on the Advanced button.
-
-<img src="images/image7.png" width="120">
-
-*Figure 7: Advanced button to proceed to the comparative simulation section.*
-
-2. This opens the advanced analysis section designed for deeper evaluation and comparison.
-3. Review the input parameters and configuration settings, as entered earlier, before proceeding.
-
-#### Step 6: Comparative Simulation Execution
-
-1. Click on Run Simulation in the Advanced section.
-
-<img src="images/image8.png" width="200">
-
-*Figure 8: Run Simulation button to execute the comparative simulation.*
-
-2. The system executes:
-* The Greedy Algorithm
-* The Optimal Dynamic Programming Algorithm
-
-<img src="images/image9.png" width="450">
-
-*Figure 9: Comparative analysis between Greedy Algorihtm and Optimal Dynamic Programming Algorithm.*
-
-3. Observe and compare the results based on:
-* Number of coins used
-* Selected coin combinations
-* Execution time
-* Overall efficiency
-
-<img src="images/image10.png" width="300">
-
-*Figure 10: Efficiency Analysis.*
-
-#### Step 7: Result Interpretation
-
-1. Compare the outputs of both approaches.
-2. Identify scenarios where:
-* The greedy algorithm produces an optimal solution.
-* The greedy algorithm fails, and the dynamic programming approach provides a better solution.
-3. Understand the practical limitations of greedy algorithms and the significance of optimal solutions obtained using dynamic programming.

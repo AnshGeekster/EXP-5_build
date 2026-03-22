@@ -351,16 +351,7 @@
           <p><strong>b. Optimal Substructure</strong></p>
           <p>A problem exhibits optimal substructure if the optimal solution to the problem can be constructed from the optimal solutions of its subproblems.</p>
           <p>This property ensures that solving the problem step by step using optimal solutions of smaller amounts will eventually result in the optimal solution for the full amount.</p>
-          <h4 id="14-time-and-space-complexity">1.4 Time and Space Complexity</h4>
-          <p>Time Complexity: <strong>O(n+k)</strong>
-          where, </p>
-          <ul>
-          <li>n = number of denominations</li>
-          <li>k = number of coins selected</li>
-          </ul>
-          <p>Space Complexity: <strong>O(1)</strong>,since no extra memory is required.</p>
-          <p>This makes greedy algorithms fast and memory-efficient.</p>
-          <h4 id="15-advantages-of-greedy-algorithms">1.5 Advantages of Greedy Algorithms</h4>
+          <h4 id="14-advantages-of-greedy-algorithms">1.4 Advantages of Greedy Algorithms</h4>
           <p>Greedy algorithms offer several benefits:</p>
           <ul>
           <li>Simple and easy to understand.</li>
@@ -369,7 +360,7 @@
           <li>Well-suited for real-time systems and large datasets.</li>
           <li>Effective for problems with clear local choices, such as scheduling and coin change in standard currency systems.</li>
           </ul>
-          <h4 id="16-disadvantages-of-greedy-algorithms">1.6 Disadvantages of Greedy Algorithms</h4>
+          <h4 id="15-disadvantages-of-greedy-algorithms">1.5 Disadvantages of Greedy Algorithms</h4>
           <p>Despite their efficiency, greedy algorithms have limitations:</p>
           <ul>
           <li>Do not guarantee an optimal solution for all problems.</li>
@@ -377,7 +368,7 @@
           <li>Not suitable for problems with complex dependencies.</li>
           <li>Performance depends heavily on problem structure.</li>
           </ul>
-          <h4 id="17-applications-of-greedy-algorithms">1.7 Applications of Greedy Algorithms</h4>
+          <h4 id="16-applications-of-greedy-algorithms">1.6 Applications of Greedy Algorithms</h4>
           <p>Greedy algorithms are widely used in various computer science applications, including:</p>
           <ul>
           <li>Coin Change Problem (canonical coin systems).</li>
@@ -393,7 +384,7 @@
           <li>Sort the coin denominations in descending order.</li>
           <li>Select the largest coin that does not exceed the remaining amount.</li>
           <li>Subtract its value from the remaining. </li>
-          <li>Repeat until the remaining amount become zero.</li>
+          <li>Repeat until the remaining amount becomes zero.</li>
           </ol>
           <p>This approach attempts to reduce the remaining amount as quickly as possible by selecting high-value coins.</p>
           <h4 id="21-greedy-algorithm-properties-in-the-coin-change-problem">2.1 Greedy Algorithm Properties in the Coin Change Problem</h4>
@@ -411,7 +402,18 @@
           <p>At each step, the algorithm selects the coin with the maximum value that is less than or equal to the remaining amount and subtracts it from the total. If the greedy choice property holds, this decision leads to an optimal solution for the entire problem.</p>
           <p><strong>b. Application of Optimal Substructure in Coin Change</strong></p>
           <p>In the coin change problem, once a greedy choice is made (i.e., a coin is selected), the remaining task is to optimally solve the smaller coin change problem for the reduced amount. If the original problem has an optimal solution, then the subproblem created after the greedy choice must also have an optimal solution using the same strategy.</p>
-          <h4 id="22-examples-greedy-approach">2.2 Examples (Greedy Approach)</h4>
+          <h4 id="22-time-and-space-complexity">2.2 Time and Space Complexity</h4>
+          <p><strong>Time Complexity (Greedy Approach):</strong> <strong>O(n + k)</strong>  </p>
+          <p>where,  </p>
+          <ul>
+          <li>n = number of denominations (coins checked once)  </li>
+          <li>k = number of coins selected in the final solution  </li>
+          </ul>
+          <p><strong>Explanation:</strong><br>The algorithm iterates through all denominations once (<strong>O(n)</strong>) and, for each denomination, selects coins until the required amount is reduced to zero (<strong>O(k)</strong> in total across all denominations). Hence, the overall time complexity is <strong>O(n + k)</strong>.</p>
+          <p><strong>Space Complexity:</strong> <strong>O(1)</strong>  </p>
+          <p>The algorithm uses a constant amount of extra space, as it does not require any additional data structures apart from a few variables.</p>
+          <p>This makes the greedy approach both time-efficient and memory-efficient.</p>
+          <h4 id="23-examples-greedy-approach">2.3 Examples (Greedy Approach)</h4>
           <ol>
           <li>Let the coin denominations be {₹1, ₹2, ₹5, ₹10} and the target amount be ₹28.</li>
           </ol>
@@ -441,9 +443,9 @@
           <p>Total coins used: 6</p>
           <p>This example demonstrates how the greedy algorithm repeatedly selects the highest possible denomination to reduce the remaining amount.</p>
           <p><strong>Explanation</strong> - The greedy algorithm first selects ₹20, reducing the amount to ₹43. It again selects ₹20 twice, leaving ₹3. Since no higher denomination fits the remaining amount, the algorithm uses three ₹1 coins. The final solution is 20 + 20 + 20 + 1 + 1 + 1, using 6 coins. As this coin system is canonical, the greedy approach produces an optimal solution.</p>
-          <h4 id="23-limitation-of-greedy-approach">2.3 Limitation of Greedy Approach</h4>
+          <h4 id="24-limitation-of-greedy-approach">2.4 Limitation of Greedy Approach</h4>
           <p>The greedy approach does not always guarantee an optimal solution because it makes decisions based only on the current step and ignores future outcomes. It assumes that a locally optimal choice will lead to a globally optimal solution, which is not always true.</p>
-          <p>Greedy algorithms may fail for non-canonical or irregular coin systems, where selecting the largest coin first can lead to a suboptimal result. Since greedy methods do not reconsider previous choices or explore all possible combinations, they may miss the best solution.In such cases, Dynamic Programming is used as it evaluates all possible subproblems and guarantees an optimal solution.</p>
+          <p>Greedy algorithms may fail for non-canonical or irregular coin systems, where selecting the largest coin first can lead to a suboptimal result. Since greedy methods do not reconsider previous choices or explore all possible combinations, they may miss the best solution. In such cases, Dynamic Programming is used as it evaluates all possible subproblems and guarantees an optimal solution.</p>
           <p><strong>Example Where Greedy Algorithm Fails</strong></p>
           <p>Consider the coin denominations {1, 3, 4} and a target amount of 6.</p>
           <ul>

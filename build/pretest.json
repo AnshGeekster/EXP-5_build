@@ -38,18 +38,18 @@
     {
       "question": "Which of the following is a valid coin denomination set for the classic coin change problem?",
       "answers": {
-        "a": "{3, 7, 11}",
-        "b": "{1, 2, 5, 10}",
-        "c": "{4, 6, 8}",
+        "a": "{1, 2, 5, 10}",
+        "b": "{3, 7, 11}",
+        "c": "{4, 6, 8}",  
         "d": "{9, 13}"
       },
       "explanations": {
-        "a": "This set does not include 1, so some amounts cannot be formed.",
-        "b": "Correct. This is a standard denomination set that allows forming any amount.",
+        "a": "Correct. This is a standard denomination set that allows forming any amount.",
+        "b": "This set does not include 1, so some amounts cannot be formed.",
         "c": "This set cannot form all values and is not commonly used.",
-        "d": "This set lacks smaller denominations needed for flexibility."
+        "d": "This set lacks smaller denominations needed for flexibility." 
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
@@ -74,17 +74,18 @@
       "answers": {
         "a": "Greedy algorithm",
         "b": "Divide and conquer",
-        "c": "Dynamic programming",
-        "d": "Brute force only"
+        "c": "Brute force only",
+        "d": "Dynamic programming"        
       },
       "explanations": {
         "a": "Greedy does not always guarantee optimal solutions.",
         "b": "Divide and conquer alone is not sufficient for this problem.",
-        "c": "Correct. Dynamic programming considers all subproblems and guarantees optimality.",
-        "d": "Brute force is inefficient and not preferred."
+        "c": "Brute force is inefficient and not preferred.",
+        "d": "Correct. Dynamic programming considers all subproblems and guarantees optimality."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
 }
+

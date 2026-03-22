@@ -102,11 +102,12 @@ where,
 * n = number of denominations (coins checked once)  
 * k = number of coins selected in the final solution  
 
-**Explanation:**  
+***Explanation:***  
 The algorithm iterates through all denominations once (**O(n)**) and, for each denomination, selects coins until the required amount is reduced to zero (**O(k)** in total across all denominations). Hence, the overall time complexity is **O(n + k)**.
 
-**Space Complexity:** **O(1)**  
+**Space Complexity:** **O(1)** 
 
+***Explanation:***  
 The algorithm uses a constant amount of extra space, as it does not require any additional data structures apart from a few variables.
 
 This makes the greedy approach both time-efficient and memory-efficient.

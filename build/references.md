@@ -21,4 +21,12 @@
    *Algorithms*, McGraw Hill Education.  
    - Chapter 6: Dynamic Programming  
 
+---
+#### Reference Websites
+
+1. NPTEL – Getting Started with Competitive Programming (IIT Gandhinagar, Prof. Neeldhara Misra)  
+   - Module 3, Lecture 13: When Greedy Does Not Work – Coin Change  
+   https://nptel.ac.in/courses/106106231
+
+
 
